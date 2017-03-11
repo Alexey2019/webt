@@ -1,0 +1,28 @@
+
+/* body {background-color: white;
+	margin-left: 20;
+} */
+img{width:240px;height:150px; margin: 5px;} 
+
+#cross{width:40px;height:40px;
+hidden;
+display:inline-block;
+float:right;
+} 
+
+p{font-family:verdana;	font-style:italic; font-weight: bold; font-size:30px; }
+/* .show{display:block;} */
+
+/* .hide{display:none;} */
+
+/* #showImage{
+	
+	width:240px;height:150px;
+	border: black 1px solid;
+} */
+
+/* #showIMG{width: 244px;
+	height:150px;
+	margin: 0px auto;
+	border:1px solid;
+ } */
