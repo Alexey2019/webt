@@ -10,6 +10,11 @@ display:inline-block;
 float:right;
 } 
 
+.click_off{border:2px solid red;}
+
+
+.click_on{border:2px solid black;}
+
 p{font-family:verdana;	font-style:italic; font-weight: bold; font-size:30px; }
 /* .show{display:block;} */
 
