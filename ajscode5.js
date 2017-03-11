@@ -1,33 +1,39 @@
 
 var srcArray = new Array();
-
+var counter = 1; 
+var force = false;
 var currentImg = 1;
-var rowImg=5;
-function imageLoad(id){
+var rowImgPlus1=6;
+
+function imageLoad(){
 	
-	var myImg=document.getElementById("img1");
+	var myImg=document.getElementById("img1");	
 	
-		for(var i = currentImg; i < rowImg+currentImg; i++){
-		
-			var pict = window.document.createElement('IMG');
-		 
-				if(i<10){							
-					srcArray[i] = "./img/0"+i+".jpg";
-				}
-				else {srcArray[i] = "./img/"+i+".jpg";}
-			try{	
-				pict.src = srcArray[i];
-			}
-			catch(e)
-			{	
-			debugger;
-			break;		
-			}
-			console.log(srcArray[i]);//prints out in console the source of array
+	var pict = new Image();
+	
+	//calculating modulus
+	var mod = currentImg % rowImgPlus1;
+	console.log(mod);
+	
+	
+	if(mod !=0 || force ){
+		var success = function(){
 			myImg.appendChild(pict);
+			currentImg++;
+			imageLoad();
 		}
-		currentImg=i;
+	}	
+		pict.onload = success;
+		pict.src = currentImg < 10?//if else short cut nottation
+			"./img/0"+currentImg+".jpg": "./img/"+currentImg+".jpg";	
+	
 }		
+
+ function loadMore(force){
+	 force = true;
+	 alert('FORCE');
+	imageLoad();
+ }
 	
 
 
