@@ -1,24 +1,26 @@
 
-//var srcArray = new Array();
-//var counter = 1; 
 var force = false;
 var currentImg = 1;
-var rowImgPlus1=6;
+var rowImgPlus1=6	;
 var counter =5;
-//var pict = new Image();//object IMAGE initialized and assigned to variable
+
+var sc = window.innerWidth;
+var imgWidth = ((sc-10-(rowImgPlus1*12))/(rowImgPlus1-1));
 
 function imageLoad(){
 	
 	var myImg=document.getElementById("img1");	
 	
-	var pict = new Image();//object IMAGE initialized and assigned to variable
+	var pict = new Image();//object IMAGE initialized and assigned to variable	
 	
+	
+	pict.setAttribute('style', 'width:'+imgWidth+'px');
 	
 	//calculating modulus
 	var mod = currentImg % rowImgPlus1;
 	console.log('currentImg: '+currentImg);
 	console.log("modulus: "+mod);
-	
+	console.log(imgWidth);		
 	
 	if(mod !=0 || force ){
 		var success = function(){
@@ -27,27 +29,43 @@ function imageLoad(){
 			imageLoad();						
 		}		
 	}	
+	pict.onload = success;
+		pict.src = currentImg < 10?//if else shortcut notation
+			"./img/0"+currentImg+".jpg": "./img/"+currentImg+".jpg";
+		pict.alt = currentImg;
 	
 	pict.className="click_off";
-	
-	pict.onclick = function(){		
+			
+	pict.onclick = function(){
+		
 		this.className="click_on";
-		turnOFF();
-		document.getElementById("msg").innerHTML = "Image description.";
+		
+		document.getElementById("msg").style.visibility="visible";
+		document.getElementById("msg").innerHTML = "Image description "+ this.alt;
+		cr=document.getElementById("cross");
+		cr.src= 'cross.jpg';
+		cr.style.visibility="visible";
+		var previous = this.alt;
+		previous.className="click_off";
+		
+		cr.onclick = function(){
+			pict.parentNode.removeChild(pict);
+			document.getElementById("msg").style.visibility="hidden";
+			cr.style.visibility="hidden";
+			
+		}
+		alert('previous: '+previous);
 	}
 	
 	pict.onerror = function(){
 		document.getElementById("button").style.display="none";
 		document.getElementById("msg").innerHTML = "The image could not be loaded.";
 	}
-		pict.onload = success;
-		pict.src = currentImg < 10?//if else short cut notation
-			"./img/0"+currentImg+".jpg": "./img/"+currentImg+".jpg";	
+		
 }		
 
 function turnOFF(){
-	var imgO = document.createElement('IMG');	
-	imgO.className="click_off";
+	var imgX = document.getElementsByTagName('IMG');	
 }
 
  function loadMore(force){

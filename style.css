@@ -2,20 +2,22 @@
 /* body {background-color: white;
 	margin-left: 20;
 } */
-img{width:240px;height:150px; margin: 5px;} 
+img{
+	height:auto; margin: 3px; 
+}
 
-#cross{width:40px;height:40px;
-hidden;
-display:inline-block;
-float:right;
+#cross{width:20px;height:20px;
+position: absolute;
+display:inline;
+float:left;
+visibility:hidden;
 } 
 
 .click_off{border:2px solid red;}
 
-
 .click_on{border:2px solid black;}
 
-p{font-family:verdana;	font-style:italic; font-weight: bold; font-size:30px; }
+p{font-family:verdana;	font-style:italic; font-weight: bold; font-size:16px; display: inline; }
 /* .show{display:block;} */
 
 /* .hide{display:none;} */
