@@ -1,0 +1,183 @@
+/*----------------------------------------------
+css settings for HTML div exactCenter 
+------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+#main{
+	width:960px;
+	margin:50px auto;
+	font-family:raleway;
+}
+
+body{
+	/* background: -moz-linear-gradient(right, red, yellow); */
+	
+	/* background:linear-gradient(to right, #304352 , #d7d2cc); */
+	background:linear-gradient(to right, #8e9eab , #eef2f3);
+	/* background:linear-gradient(to right, #FEAC5E , #C779D0 , #4BC0C8); */
+	/* background:linear-gradient(to right, #70e1f5 , #ffd194); */	
+	/* background:linear-gradient(to right, #DAD299 , #B0DAB9); */
+}
+
+span{
+	color:red;
+}
+
+
+h2{
+	text-align:center;
+	border-radius: 10px 10px 0 0;
+	margin: -10px -40px;
+	padding: 30px;
+}
+
+hr{
+	border:0;
+	border-bottom:1px solid #ccc;
+	margin: 10px -40px;
+	margin-bottom: 30px;
+}
+
+#form1_header_bg{background-color: #EFFEA3;cursor:pointer;}
+
+#form1_layout{
+	width:300px;
+	background-color: #EFFEA3;
+	float: right;
+	border-radius: 10px;
+	font-family:raleway;
+	border: 2px solid #ccc;
+	padding: 10px 40px 25px;
+	margin-top: -2px;
+}
+
+/* simple css-based tooltip */
+.tooltip {
+	position: relative;
+	/* background-color:black; */
+    /* background-color:#000; */
+    /* border:1px solid #fff; */
+    /* padding:10px 15px; */
+    /* width:200px; */
+    display:inline-block;
+    /* color:#fff; */
+    /* text-align:left; */
+    /* font-size:12px; */
+ 
+    /* outline radius for mozilla/firefox only */
+    /* -moz-box-shadow:0 0 10px #000; */
+    /* -webkit-box-shadow:0 0 10px #000; */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+	 background-color:#000;
+	 border:1px solid #fff;
+    /* width: 120px; */
+	width:200px;
+    /* background-color: #555; */
+    color: #fff;
+    text-align: left;
+    /* padding: 5px 0; */
+	padding:10px 15px;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    /* opacity: 0; */
+    /* transition: opacity 1s; */
+	/* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#form2_header_bg{background-color: #EBF1FF;cursor:pointer;}
+
+#form2_layout{
+	width:300px;
+	background-color: #EBF1FF;
+	float: left;
+	border-radius: 10px;
+	font-family:raleway;
+	border: 2px solid #ccc;
+	padding: 10px 40px 25px;
+	margin-top: -2px;
+}
+ 
+#username, #password, #email{
+	width:99.5%;
+	padding: 10px;
+	margin-top: 8px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+	font-size: 16px;
+	font-family:raleway;
+}
+
+#dayText, #monthText, #yearText{
+	width:30%;
+	padding: 10px;
+	margin-top: 8px;
+	border: 1px solid #ccc;
+	text-align:center;
+	padding-left: 5px;	
+	font-size: 16px;
+	font-family:raleway;
+}
+
+input[type=button]{
+	width: 100%;
+	color: white;
+	padding: 10px;
+	font-size:20px;
+	cursor:pointer;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+#submit1{background-color: #06C706; border: 1px solid #2D882D;}
+
+#submit2{background-color: #4277F2; border: 1px solid #0538AE;}
+
+a{
+text-decoration:none;
+/* color: cornflowerblue; */
+color: blue;
+}
+
+i{
+/* color: cornflowerblue; */
+color: blue;
+}
+
+p{
+	text-align:center;
+	font-size:14px;
+	color:red;
+	
+}

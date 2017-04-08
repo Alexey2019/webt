@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title> Form Validation </title>
+       
+        <link rel="stylesheet" type="text/css" href="styleA2.css">
+		<script type="text/javascript" charset="UTF-8"></script><script src="formvalidA2.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>  
+        
+		<script>
+			$(document).ready(function(){
+				$("#submit2").click(validateForm2);
+				
+				$("#form2_header_bg").click(function(){
+					$("#form2_body").slideToggle("slow");			
+				});
+				
+				$("#form1_header_bg").click(function(){
+					$("#form1_body").slideToggle("slow");			
+				});
+				
+			});</script>	
+ 
+	<style> 
+		#form1_body, #form2_body {display: none;}
+	</style>				
+		
+    </head>
+    <body>	
+	
+        <div id="main">
+			<div id="form2_layout" name='loginForm'>
+		
+				<!-- LOG IN Form starts from here-->
+				<h2 id="form2_header_bg">LOG IN</h2>
+				
+				<!-- <form  onsubmit='return formValidation()'><br><p id="head"></p><br> -->
+				<div id="form2_body">
+			<form  name='loginForm'><p id="mandat2"></p><br>
+				<label>Username:</label>
+				<input type='text' id='username' name='usernameText2' placeholder='username'/><br />
+				<p id="p5"></p>	<!--This segment displays the validation rule for name--> 				
+		
+				<label>Password (6-40 characters):</label>
+				<input type='text' id='password' name='passwordText2' placeholder='password' /><br />
+				<p id="p6"></p><br /> <!--This segment displays the validation rule for user name--> 		
+		
+				<input type='button' id="submit2" value='Log In' /><br />
+			</form>
+				</div>
+			</div>		
+		
+        <div id="form1_layout">			
+			
+			<h2 id="form1_header_bg">Registration Form</h2>				
+	<!-- Registration Form starts from here-->
+	<form  name='regForm' id="form1_body" ><p id="mandat"></p>
+		<label for="username" class="tooltip">Username:
+			<span class="tooltiptext">Username must be only letters</span>
+		</label>
+		
+		<input type='text' id='username' name='usernameText' placeholder='your username' title="Must be letters only"/><br />
+		<p id="p1"></p>	<!--This segment displays the validation rule for name--> 				
+		
+		<label for="password" class="tooltip">Password:				
+			<span class="tooltiptext">Passwords must be at least 6 characters long 
+			and must contain a mix of uppercase and lowercase letters and digits (no any symbols are allowed).</span>				
+		</label>
+		
+		<input type='password' id='password' name='passwordText' placeholder='your password' /><br />
+		<p id="p2"></p> <!--This segment displays the validation rule for user name--> 
+		
+		<label>Email:</label>
+		<input type='text' id='email' name='emailText' placeholder='your valid email' /><br />
+		<p id="p3"></p> <!--This segment displays the validation rule for email--> 
+		
+		<label>Date of Birth:</label>
+		<!-- <input type='text' id='dob' name='dobText' placeholder='DD/MM/YYYY'/> -->
+		<!-- <td class="data"> -->
+		<div>
+			<input type="text" name="dayText" id="dayText" width="2" maxlength="2" size="2" placeholder='DD'>/
+			<input type="text" name="monthText" id="monthText" width="2" maxlength="2" size="2" placeholder='MM'>/
+			<input type="text" name="yearText" id="yearText" width="4" maxlength="4" size="4" placeholder='YYYY'>
+		</div>	
+		<!-- </td> -->
+		<p id="p4"></p> <br /><!--This segment displays the validation rule for address--> 
+		<div><p></p><div/>
+		<input type='button' id="submit1" value='Register' onclick="validateForm()"/><br />
+	</form>
+
+            </div>
+           
+        </div>
+	</div>
+	<!-- <div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_visitors/47074-1-5.js"></script></div> -->
+    </body>
+</html>
